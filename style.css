@@ -283,9 +283,8 @@ header .header-social .social-icon{
   margin-left: 50px;
 }
 
-.location-area-content .location-map img {
+.location-area-content .location-map iframe {
   width: 75%;
-  height: auto;
   border-radius: 20px;
   box-shadow: 0px 3px 5px black;
 }
