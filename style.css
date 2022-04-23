@@ -89,13 +89,14 @@ header .header-social .social-icon{
   background-color: black;
   width: 100%;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px 20px;
   color: white;
 }
 
 .promotion-area span {
   font-weight: 600;
   color: var(--primary-color);
+  animation: promotion 1s infinite;
 }
 
 .benefits-section {
@@ -105,6 +106,13 @@ header .header-social .social-icon{
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+}
+
+.benefits-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .benefits-section div {
@@ -180,7 +188,7 @@ header .header-social .social-icon{
   color: #2D2D2D;
   font-weight: 600;
   box-shadow: 0px 2px 3px black;
-
+  cursor: pointer;
 }
 
 .plans-section .plan:nth-child(2) {
@@ -203,11 +211,11 @@ header .header-social .social-icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0a0a0a;
+  background-color: var(--primary-color);
   width: 100%;
-  color: white;
+  color: #2D2D2D;
   padding-top: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .product-area .text-area,
@@ -219,6 +227,7 @@ header .header-social .social-icon{
 
 .product-area .text-area {
   font-size: 22px;
+  font-weight: 600;
 }
 
 .product-area .text-area span {
@@ -231,8 +240,18 @@ header .header-social .social-icon{
 
 .product-area .description-area span {
   font-size: 34px;
-  color: rgb(0, 177, 0);
+  color: rgb(0, 109, 0);
   font-weight: 600;
+  animation: promotion 1s infinite;
+}
+
+@keyframes promotion {
+  from {
+    color: red;
+  }
+  to {
+    color: black;
+  }
 }
 
 .product-item-area img {
@@ -250,7 +269,7 @@ header .header-social .social-icon{
 
 .location-area button {
   padding: 20px 20px;
-  background-color: rgb(0, 177, 0);
+  background-color: rgb(0, 126, 0);
   border: none;
   color: white;
   font-size: 18px;
@@ -293,4 +312,108 @@ header .header-social .social-icon{
   font-weight: 600;
   margin: 10px 0;
   font-size: 18px;
+}
+
+/* medias */
+
+@media (max-width: 768px) {
+  .location-area-content .location-map iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .header-social {
+    display: none;
+  }
+
+  .principal-section .section-filter {
+    padding: 0 20px;
+  }
+
+  .promotion-area {
+    font-size: 12px;
+  }
+
+  .benefits-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .benefits-section .benefits-area {
+    padding: 10px 0;
+  }
+  .benefits-section .benefits-area:nth-child(2) {
+    border: none;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .plan-area {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .plans-section .plans-title h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    padding: 10px 0;
+  }
+
+  .plan-area .plan,
+  .plan-area .plan:nth-child(2) {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-area {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .product-area .text-area {
+    display: none;
+  }
+
+  .product-area .description-area span{
+    font-size: 25px;
+  }
+
+  .location-area-content {
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .location-area button {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+
+  .location-area-content {
+    margin-top: -20px;
+  }
+
+  .location-area .location-info {
+    text-align: center;
+    margin: 0;
+  }
+
+  .location-area-content .location-map{
+    margin: 0;
+  }
+
+  .location-area-content .location-map iframe{
+    width: 100%;
+  }
 }
